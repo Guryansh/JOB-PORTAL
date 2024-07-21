@@ -6,6 +6,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import PostJob from "../Pages/PostJob";
 import MyJobs from "../Pages/MyJobs.jsx";
+import SalaryPage from "../Pages/SalaryPage.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
             {path: "/about", element: <About/>},
             {path: "/post-job", element: <PostJob/>},
             {path: "/my-job", element: <MyJobs/>},
+            {path: "/salary", element: <SalaryPage/>},
         ]
     },
 ]);
