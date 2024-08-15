@@ -13,7 +13,7 @@ const MyJobs = () => {
 
     React.useEffect(() => {
         setIsLoading(true);
-        fetch(`http://localhost:3000/myJobs/${email}`)
+        fetch(`${process.env.BACKEND_URL}/myJobs/${email}`)
             .then((res) => res.json())
             .then((data) => {
                 setJobs(data);
@@ -48,7 +48,7 @@ const MyJobs = () => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`http://localhost:3000/job/${id}`, {
+        fetch(`${process.env.BACKEND_URL}/job/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

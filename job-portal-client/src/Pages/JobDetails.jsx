@@ -7,7 +7,7 @@ const JobDetails = () => {
     const {id} = useParams();
     const [job, setJob] = React.useState([]);
     useEffect(() => {
-        fetch(`https://localhost:3000/all-jobs/${id}`)
+        fetch(`${process.env.BACKEND_URL}/all-jobs/${id}`)
             .then(res => res.json())
             .then(data => setJob(data));
     })

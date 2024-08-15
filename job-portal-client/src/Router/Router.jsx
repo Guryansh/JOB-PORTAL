@@ -21,7 +21,11 @@ const router = createBrowserRouter([
             {path: "/post-job", element: <PostJob/>},
             {path: "/my-job", element: <MyJobs/>},
             {path: "/salary", element: <SalaryPage/>},
-            {path: "/edit-job/:id", element: <UpdateJob/>,loader:({params})=>fetch(`http://localhost:3000/all-jobs/${params.id}`)},
+            {
+                path: "/edit-job/:id",
+                element: <UpdateJob/>,
+                loader: ({params}) => fetch(`${process.env.BACKEND_URL}/all-jobs/${params.id}`)
+            },
             {path: "/login", element: <Login/>},
             {path: "/job/:id", element: <JobDetails/>},
 

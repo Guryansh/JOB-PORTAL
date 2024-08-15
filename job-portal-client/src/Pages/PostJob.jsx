@@ -12,7 +12,7 @@ const PostJob = () => {
     } = useForm();
     const onSubmit = (data) => {
         data.skills = selectedOption;
-        fetch("http://localhost:3000/post-job", {
+        fetch(`${process.env.BACKEND_URL}/post-job`, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

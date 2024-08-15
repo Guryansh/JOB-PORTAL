@@ -31,7 +31,7 @@ const UpdateJob = () => {
     } = useForm();
     const onSubmit = (data) => {
         data.skills = selectedOption;
-        fetch(`http://localhost:3000/update-job/${_id}`, {
+        fetch(`${baseroute}/update-job/${_id}`, {
             method: 'PATCH',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)
